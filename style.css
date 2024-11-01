@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+body {
+  background-color: #212121;
+  color: #f5a13b;
+  font-family: 'Shadows Into Light Two', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  padding: 20px;
+  border: 2px solid #f5a13b;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 15px #f5a13b;
+}
+
+h1 {
+  font-family: 'Creepster', cursive; 
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #ff7518;
+}
+
+button {
+  padding: 10px 20px; 
+  font-size: 1.2em; 
+  font-family: 'Creepster', cursive; 
+  color: #121212; 
+  background-color: #f5a13b; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  transition: 0.3s ease; 
+  margin-top: 5px; 
+}
+
+button:hover {
+  background-color: #ff7518;
+  box-shadow: 0 0 10px #ff7518;
+}
+
+.suggestion {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-style: italic;
+  color: #e07bb2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.movie-info {
+  margin-top: 10px;
+  color: #f5a13b;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.movie-poster {
+  max-width: 150px;
+  max-height: 225px;
+  margin-right: 20px;
+}
+
+html {
+  background: #ff785a;
+}
+
+.spider {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 10%; 
+  animation: swing 2s infinite;
+  transform-origin: top;
+  transition: 1s ease-in-out;
+}
+
+.spider .spiderweb {
+  width: 2px;
+  height: 200px;
+  margin-left: 49px;
+  background: rgba(255,255,255, .7);
+}
+
+.spider .body {
+  width: 100px;
+  height: 80px;
+  background: #000;
+  position: relative;
+  border-radius: 50%;
+}
+
+.spider .body .eye {
+  width: 33px;
+  height: 33px;
+  position: absolute;
+  bottom: 20px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.spider .body .eye.left {
+  left: 15px;
+}
+
+.spider .body .eye.right {
+  right: 15px;
+}
+
+.spider .body .eye:after {
+  background: #000;
+  width: 7px;
+  height: 7px;
+  content: '';
+  display: block;
+  margin: 55%;
+  border-radius: 50%;
+  animation: look 8s infinite;
+}
+
+.spider .legs .leg {
+  width: 80px;
+  height: 40px;
+  margin-top: -20px;
+  border: 5px solid transparent;
+  border-top-color: #000;
+  border-radius: 40px 40px 0 0;
+}
+
+.spider .legs {
+  position: absolute;
+  bottom: -10%;
+  z-index: -1;
+}
+
+.spider .legs.left {
+  left: -70%;
+}
+.spider .legs.right {
+  right: -60%;
+}
+
+.legs.left .leg:nth-child(1){
+  transform: rotate(10deg);
+  margin-left: 10px;
+}
+.legs.right .leg:nth-child(1){
+  transform: rotate(-10deg);
+  margin-left: -10px;
+}
+
+.legs.left .leg:nth-child(2){
+  transform: rotate(-20deg);
+  margin-left: 20px;
+}
+.legs.right .leg:nth-child(2){
+  transform: rotate(20deg);
+  margin-left: -20px;
+}
+
+.legs.left .leg:nth-child(3){
+  transform: rotate(-50deg);
+  margin-left: 30px;
+}
+.legs.right .leg:nth-child(3){
+  transform: rotate(50deg);
+  margin-left: -30px;
+}
+
+@keyframes look {
+  0%, 40%, 100% {
+      transform: translateX(0); 
+  }
+  45%, 95% {
+      transform: translateX(-110%);
+  }
+}
+
+.pumpkin {
+    height: 10em; /* Düzgün boyut için ayarlandı */
+    width: 12em; /* Düzgün boyut için ayarlandı */
+    background: #f68632;
+    border: 0.4em solid #a14907;
+    border-radius: 70%/110%;
+    position: fixed; /* Position fixed to keep it in the corner */
+    bottom: 20px; /* Adjust as necessary */
+    right: 20px; /* Adjust as necessary */
+    box-shadow: inset 0 0px 20px #a14907, 0 0 30px -4px red;
+    z-index: 1;
+    animation: float 3s infinite;
+}
+
+.pumpkin .texture {
+    height: 9.5em; /* Yüzey kısmının boyutu */
+    width: 8em; /* Yüzey kısmının boyutu */
+    position: absolute;
+    bottom: -0.4em;
+    left: 2em; /* Düzgün konum için ayarlandı */
+    border-radius: 70%/130%;
+    border-bottom: 0.5em solid #a14907;
+    border-top: 0.5em solid #a14907;
+}
+
+.pumpkin .root {
+    background: #517f54;
+    height: 2.5em; /* Kökün boyutu */
+    width: 1.5em; /* Kökün boyutu */
+    position: absolute;
+    left: calc(50% - 0.75em); /* Düzgün konum için ayarlandı */
+    top: -2.2em; /* Düzgün konum için ayarlandı */
+    transform: rotate(10deg);
+    border-radius: 30% 20% 70% 10%;
+    z-index: -1;
+    box-shadow: inset 0 0px 10px #29412b;
+}
+
+.pumpkin .eye {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 1em solid transparent; /* Gözün üst kısmı */
+    border-bottom: 1em solid black; /* Gözün alt kısmı */
+}
+
+.pumpkin .eye.left {
+    left: 2.5em; /* Sol gözün konumu */
+    border-right: 1em solid transparent; /* Gözün sağ tarafı */
+    border-left: 1em solid transparent; /* Gözün sol tarafı */
+    top: 1.5em; /* Göz yüksekliği */
+}
+
+.pumpkin .eye.right {
+    right: 2.5em; /* Sağ gözün konumu */
+    border-right: 1em solid transparent; /* Gözün sağ tarafı */
+    border-left: 1em solid transparent; /* Gözün sol tarafı */
+    top: 1.5em; /* Göz yüksekliği */
+}
+
+.pumpkin .mouth {
+    position: absolute;
+    background: #000;
+    height: 1.2em; /* Ağız yüksekliği */
+    width: 4em; /* Ağız genişliği */
+    bottom: 3.5em; /* Ağız yüksekliği */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+.pumpkin .teeth {
+    position: absolute;
+    height: 0.5em; /* Diş yüksekliği */
+    width: 1.5em; /* Diş genişliği */
+    top: 0; /* Dişin konumu */
+    left: calc(50% - 0.75em); /* Dişin ortalaması */
+}
+
+.pumpkin .shadow {
+    position: absolute;
+    bottom: -0.5em; /* Gölgeler için konum */
+    left: 1.5em; /* Düzgün konum için ayarlandı */
+    width: 9em; /* Gölgenin genişliği */
+    height: 2em; /* Gölgenin yüksekliği */
+    border-radius: 50%; /* Gölgenin yuvarlak görünümü */
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0.4; /* Gölgenin görünürlüğü */
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+}

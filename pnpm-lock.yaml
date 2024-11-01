@@ -1,0 +1,22 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      bourbon:
+        specifier: ^7.3.0
+        version: 7.3.0
+
+packages:
+
+  bourbon@7.3.0:
+    resolution: {integrity: sha512-u9ZUqmaX7K7nkarKODlFT4/XYfWafLRoadlv2Lye8hytrIA4Urg/50rav1eFdbdbO6o9GnK9a6qf7zwq808atA==}
+
+snapshots:
+
+  bourbon@7.3.0: {}
