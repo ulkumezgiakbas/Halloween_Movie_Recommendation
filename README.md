@@ -4,6 +4,9 @@ A Halloween-themed web design offering random horror movie recommendations from 
 <img width="1399" alt="Screenshot 2024-11-01 at 14 18 51" src="https://github.com/user-attachments/assets/0129582e-03ac-4290-936f-c39dac200121">
 
 
-https://github.com/user-attachments/assets/64d01fc6-dd36-4bac-9af0-4bd1600b9665
+
+
+https://github.com/user-attachments/assets/1e1963a2-55bc-4239-94c8-193914826f02
+
 
 
